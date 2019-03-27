@@ -11,7 +11,7 @@
 #define FIZZ_DIVISION 3
 #define BUZZ_DIVISION 5
 
-//Use this class to teach the student about division
+//Use this class to teach the students about division
 class CFizzBuzz
 {
 public:
@@ -19,6 +19,7 @@ public:
 	void AddPlayer		(std::string _name);
 	void AskQuestion	(int32_t _number);
 	void DisplayResults	();
+
 	CFizzBuzz			();
 	~CFizzBuzz			();
 private:

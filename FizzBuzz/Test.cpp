@@ -14,6 +14,7 @@ int main()
 	std::string playerName;
 	std::cout << "[Fizz Buzz]\n";
 	
+	fizzBuzz.ResetGame();
 	//Initialize players
 	{
 		std::cout << "Enter the number of players : ";
@@ -25,22 +26,25 @@ int main()
 			fizzBuzz.AddPlayer(playerName);
 		}
 	}
-
 	//Questions
 	{
 		std::cout << "\nEnter the number of questions : ";
 		std::cin >> questionsNumber;
+		std::cout << "Answer is 'Fizz' if number is fraction of 3\n";
+		std::cout << "Answer is 'Buzz' if number is fraction of 5\n";
+		std::cout << "Answer is 'FizzBuzz' if number is fraction of both 3 and 5\n";
+		std::cout << "Answer is number\n";
 		std::cout << "\n\n";
 	}
 
 	//Asking questions
-	fizzBuzz.ResetGame();
-	for (index = 0; index < questionsNumber; index++){
+	for (index = 1; index <= questionsNumber; index++){
 		fizzBuzz.AskQuestion(index);
 	}	
+	std::cout << "Game is finished.\n";
 
 	fizzBuzz.DisplayResults();
 
-	std::cout << "Press any key to exit...";
+	std::cout << "\n\nPress any key to exit...";
 	getchar();
 }
